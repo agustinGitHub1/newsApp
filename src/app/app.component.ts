@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NewsService } from './services/news-service/news.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'newsApp';
+
+  constructor() {}
 }

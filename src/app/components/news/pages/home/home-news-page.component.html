@@ -1,0 +1,17 @@
+<div class="news-container">
+    <h1>Recent News</h1>
+
+    <div class="spinner-container" [ngClass]="{'visible': isLoading, 'hidden': !isLoading}">
+      <app-spinner></app-spinner>
+    </div>
+
+      <div class="card-container"  [ngClass]="{'visible': !isLoading, 'hidden': isLoading}">
+        <app-card
+            *ngFor="let newsArticle of displayedNews"
+            [title]="newsArticle.title"
+            [image]="newsArticle.urlToImage"
+            [url]="newsArticle.url"
+            [article]="newsArticle">
+          </app-card>
+    </div>
+</div>

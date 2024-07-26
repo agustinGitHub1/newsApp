@@ -1,0 +1,11 @@
+
+  <div *ngIf="article" class="article-container">
+    <button class="back-button" (click)="goBack()">Back</button>
+    <p class="article-description">Author: {{ article.author }}</p>
+    <p class="article-description">Published date: {{ formatedDate }}</p>
+    <h1 class="article-title">{{ article.title }}</h1>
+    <h3 class="article-description">{{ article.description }}</h3>
+    <img [src]="article.urlToImage" alt="Image" class="article-image">
+    <p class="article-description">{{ article.content }}</p>
+    <p class="article-description">Original article Url: {{ article.url }}</p>
+  </div>
