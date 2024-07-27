@@ -6,7 +6,8 @@ import { catchError, throwError } from 'rxjs';
 @Injectable({providedIn: 'root'})
 export class NewsService {
   //private newsApiKey = '98d84fd00e044551af0c5099b7367829';
-  private newsApiKey = '36db83b4ee564a7789cd10a431bd930c';
+  // FUDO apikey: 8ab9f6a80b5241b4ba7f0b3938ea683e
+  private newsApiKey = '8ab9f6a80b5241b4ba7f0b3938ea683e';
   private newsBaseUrl = `https://newsapi.org/v2/everything`
 
   constructor(private httpClient: HttpClient) { }
