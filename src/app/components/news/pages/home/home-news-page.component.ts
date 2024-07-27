@@ -22,7 +22,6 @@ export class HomeNewsComponent implements OnInit {
       next: (data: NewsArticle) => {
         try {
           this.news = data.articles?.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()) || [];
-          console.log('NOTICIAS', this.news);
           this.displayedNews = this.news.slice(0, 6);
           setTimeout(() => {
             this.isLoading = false;

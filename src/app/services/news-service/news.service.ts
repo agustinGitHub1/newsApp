@@ -5,13 +5,22 @@ import { catchError, throwError } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class NewsService {
-  private newsApiKey = '98d84fd00e044551af0c5099b7367829';
-  private newsUrl = `https://newsapi.org/v2/everything?q=news&apiKey=${this.newsApiKey}`;
+  //private newsApiKey = '98d84fd00e044551af0c5099b7367829';
+  private newsApiKey = '36db83b4ee564a7789cd10a431bd930c';
+  private newsBaseUrl = `https://newsapi.org/v2/everything`
 
   constructor(private httpClient: HttpClient) { }
 
   getNews() {
-    return this.httpClient.get<NewsArticle>(this.newsUrl).pipe(
+    return this.httpClient.get<NewsArticle>(`${this.newsBaseUrl}?q=news&apiKey=${this.newsApiKey}`).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getSearchedNews(query: string) {
+    const encodedQuery = encodeURIComponent(query);
+
+    return this.httpClient.get<NewsArticle>(`${this.newsBaseUrl}?q=${encodedQuery}&apiKey=${this.newsApiKey}`).pipe(
       catchError(this.handleError)
     );
   }
@@ -28,12 +37,6 @@ export class NewsService {
     console.error(errorMessage);
 
     return throwError(() => new Error(errorMessage));
-  }
-
-  getOneNewArticle(sourceId: string, titleQuery: string) {
-    return this.httpClient.get<NewsArticle>(this.newsUrl).pipe(
-      catchError(this.handleError)
-    );
   }
 
 }

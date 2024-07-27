@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsModule } from './components/news/news.module';
 import { SharedModule } from './shared/shared.module';
+import { MainPageModule } from './components/main-page.module';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +15,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    NewsModule,
+    HttpClientModule,
+    MainPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
