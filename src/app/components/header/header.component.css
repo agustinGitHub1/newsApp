@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
   background-color: var(--card-color);
   padding: 10px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 20px;
 }
 
 h1 {
@@ -17,4 +17,9 @@ h1 {
   margin: 0;
   text-align: center;
   letter-spacing: 1px;
+  flex: 1;
+}
+
+app-news-searcher {
+  flex: 1;
 }

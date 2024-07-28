@@ -24,6 +24,12 @@ export class CardComponent {
     return this.image ? this.image : this.defaultImg;
   }
 
+  setDefaultImage(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.src = this.defaultImg;
+  }
+
+
   onCardClick() {
     if (this.article) {
       this.selectedCardService.setSelectedCard(this.article);

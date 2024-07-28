@@ -1,11 +1,11 @@
 
   <div *ngIf="article" class="article-container">
-    <button class="back-button" (click)="goBack()">Back</button>
-    <p class="article-description">Author: {{ author }}</p>
-    <p class="article-description">Published date: {{ formatedDate }}</p>
+    <button class="back-button" (click)="goBack()">{{'back-label' | translate}}</button>
+    <p class="article-description">{{ 'author-label' | translate }}: {{ author }}</p>
+    <p class="article-description">{{ 'published-date-label' | translate }}: {{ formatedDate }}</p>
     <h1 class="article-title">{{ article.title }}</h1>
     <h3 class="article-description">{{ article.description }}</h3>
     <img [src]="article.urlToImage" alt="Image" class="article-image">
     <p class="article-description">{{ article.content }}</p>
-    <p class="article-description">Original article Url: <a [href]="article.url">{{ article.url }}</a></p>
+    <p class="article-description">{{ 'original-article-url-label' | translate }}: <a class="article-url" [href]="article.url">{{ article.url }}</a></p>
   </div>

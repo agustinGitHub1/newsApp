@@ -5,17 +5,14 @@
   text-decoration: none;
 }
 
-.card-content  {
-  font-family: "Arial";
-  padding: 2rem;
-  flex-grow: 1;
+.card-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .card {
-  justify-content: center;
-  /* background-color: #fff; */
   background-color: var(--card-color);
   border-radius: 8px;
   box-shadow: 0 4px 8px var(--card-shadow-color);
@@ -26,29 +23,52 @@
   flex-direction: column;
   height: 400px;
   max-width: 300px;
-  overflow-wrap: break-word;
-  gap: 20px;
 }
 
 .card-link {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  /* color: #000; */
+  height: 100%;
   color: var(--text-color);
+  text-decoration: none;
 }
 
 .card-image {
-  height: auto;
   width: 100%;
+  height: auto;
   display: block;
+}
+
+.card-content {
+  font-family: "Arial", sans-serif;
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-title {
   font-weight: 600;
-  /* color: #000; */
   color: var(--text-color);
   font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  margin-top: 0.2rem;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  color: var(--text-color);
+}
+
+.card-author {
+  font-style: italic;
+  margin-top: 0.2rem;
+  color: var(--text-color);
 }
 
 .card:hover {

@@ -1,9 +1,11 @@
 <div class="card-container">
   <div class="card" (click)="onCardClick()">
     <a class="card-link">
-      <img [src]="imageUrl" alt="Image" class="card-image">
+      <img [src]="imageUrl" alt="Image" class="card-image" (error)="setDefaultImage($event)">
       <div class="card-content">
         <h2 class="card-title">{{title}}</h2>
+        <h3 class="card-author">{{ 'author-label' | translate }}: {{article.author}}</h3>
+        <p class="card-description">{{article.description}}</p>
       </div>
     </a>
   </div>

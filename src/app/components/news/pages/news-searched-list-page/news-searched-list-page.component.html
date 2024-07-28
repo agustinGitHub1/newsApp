@@ -1,6 +1,6 @@
 <div class="news-container">
-  <h1>Searched News</h1>
-  <button class="back-button" (click)="goBack()">Back</button>
+  <h1>{{'search-news-title-label' | translate}}</h1>
+  <button class="back-button" (click)="goBack()">{{'back-label' | translate}}</button>
 
   <div class="card-container">
     <app-card
@@ -13,9 +13,9 @@
   </div>
 
   <div class="pagination" *ngIf="totalPages > 1">
-    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
-    <span>Page {{currentPage}} of {{totalPages}}</span>
-    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">{{'previous-page-label' | translate}}</button>
+    <span>{{'page-label' | translate}} {{currentPage}} {{'of-label' | translate}} {{totalPages}}</span>
+    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">{{'next-page-label' | translate}}</button>
   </div>
 </div>
 

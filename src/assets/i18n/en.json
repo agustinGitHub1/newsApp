@@ -1,0 +1,21 @@
+{
+  "app-news-title": "App News",
+  "search-bar-placeholder-label": "Search for news and press enter...",
+  "home-title-label": "Recent news",
+  "back-label":"Back",
+  "search-news-title-label": "Searched News",
+  "page-label": "Page",
+  "of-label": "of",
+  "previous-page-label": "Previous",
+  "next-page-label": "Next",
+  "published-date-label": "Published date",
+  "original-article-url-label": "Original article url",
+  "news-label": "News",
+  "author-label": "Author",
+  "about-us-label": "About us",
+  "privacy-policy-label": "Privacy Policy",
+  "contact-us-label": "Contact",
+  "copyright-label": "@ 2024 App News. All rights reserved.",
+  "english-selection-label": "English",
+  "spanish-selection-label": "Español"
+}

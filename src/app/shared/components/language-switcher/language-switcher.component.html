@@ -1,0 +1,6 @@
+<div class="language-switcher">
+  <select (change)="changeLanguage($event)" [value]="selectedLanguage">
+    <option class="text-lang-options"  value="en">{{'english-selection-label' | translate}}</option>
+    <option class="text-lang-options" value="es">{{'spanish-selection-label' | translate}}</option>
+  </select>
+</div>

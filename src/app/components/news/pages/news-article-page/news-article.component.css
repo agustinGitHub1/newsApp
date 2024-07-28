@@ -71,3 +71,7 @@
 .back-button:focus {
   outline: none;
 }
+
+.article-url {
+  color: #9c0b0b;
+}
