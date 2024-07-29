@@ -11,3 +11,9 @@ export function getFormatedDate(date: Date): string {
 
   return publishedDate.toLocaleString('en-US', options);
 }
+
+export function setDefaultImage(event: Event, defaultImg: string): string {
+  const img = event.target as HTMLImageElement;
+  img.src = defaultImg;
+  return img.src;
+}

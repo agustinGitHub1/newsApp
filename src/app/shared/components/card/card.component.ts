@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Article, NewsArticle } from 'src/app/interfaces/news-interface/news.interface';
+import { Article } from 'src/app/interfaces/news-interface/news.interface';
 import { SelectedCardService } from 'src/app/services/news-service/card-selected.service';
 import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
+import { setDefaultImage } from '../../helpers/helps';
 
 @Component({
   selector: 'app-card',
@@ -24,10 +25,15 @@ export class CardComponent {
     return this.image ? this.image : this.defaultImg;
   }
 
+  // setDefaultImage(event: Event): void {
+  //   const img = event.target as HTMLImageElement;
+  //   img.src = this.defaultImg;
+  // }
+
   setDefaultImage(event: Event): void {
-    const img = event.target as HTMLImageElement;
-    img.src = this.defaultImg;
+    setDefaultImage(event, this.defaultImg);
   }
+
 
 
   onCardClick() {

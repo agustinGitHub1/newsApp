@@ -7,11 +7,13 @@ import { BlankComponent } from './components/blank-component/blank-component.com
 import { ThemeSwitcherComponent } from './components/theme-switcher/theme-switcher.component';
 import { TranslatePipe } from './pipes/translate.pipe';
 import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
+import { ModalPopuComponent } from './components/modal-popup/modal-popup.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  exports: [CardComponent,SpinnerComponent, BlankComponent, ThemeSwitcherComponent, TranslatePipe, LanguageSwitcherComponent],
-  declarations: [CardComponent, SpinnerComponent, BlankComponent, ThemeSwitcherComponent, TranslatePipe, LanguageSwitcherComponent],
+  exports: [CardComponent,SpinnerComponent, BlankComponent, ThemeSwitcherComponent, TranslatePipe, LanguageSwitcherComponent, PaginatorComponent, ModalPopuComponent],
+  declarations: [CardComponent, SpinnerComponent, BlankComponent, ThemeSwitcherComponent, TranslatePipe, LanguageSwitcherComponent, PaginatorComponent, ModalPopuComponent],
   providers: [],
 })
 export class SharedModule { }

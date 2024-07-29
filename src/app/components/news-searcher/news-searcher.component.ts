@@ -16,6 +16,8 @@ export class NewsSearcherComponent implements OnInit {
   searchQuery: string = '';
   private debouncer: Subject<string> = new Subject<string>();
   searchImg: string = IMAGE_URLS_CONSTANTS.SEARCH_IMG;
+  errorTitleModal: string = '';
+  showErrorModal: boolean = false;
 
   constructor(private newsService: NewsService, private router: Router) { }
 
@@ -44,10 +46,15 @@ export class NewsSearcherComponent implements OnInit {
         },
         error => {
           console.error('Error fetching search results:', error);
+          this.showErrorModal = true;
         }
       );
     } else {
       this.searchResults = [];
     }
+  }
+
+  handleCloseModal() {
+    this.showErrorModal = false;
   }
 }

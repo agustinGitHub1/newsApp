@@ -14,4 +14,18 @@
             [article]="newsArticle">
           </app-card>
     </div>
+
+    <app-paginator
+    [currentPage]="currentPage"
+    [totalPages]="totalPages"
+    (pageChanged)="onPageChanged($event)">
+  </app-paginator>
+
+  <app-modal-popup
+    title="{{'error-title-label' | translate}}"
+    message="{{'error-message-label' | translate}}"
+    [isVisible]="showErrorModal"
+    (closeModal)="handleCloseModal()">
+  </app-modal-popup>
+
 </div>

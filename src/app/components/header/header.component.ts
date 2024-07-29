@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['header.component.css']
 })
 
-export class HeaderComponent implements OnInit {
-  constructor() { }
+export class HeaderComponent {
+  homeImg: string = IMAGE_URLS_CONSTANTS.HOME_IMG;
 
-  ngOnInit() { }
+  constructor(private router: Router) {}
+
+  navigateToRoute(route: string): void {
+    this.router.navigate([route]);
+  }
 }

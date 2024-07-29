@@ -23,3 +23,28 @@ h1 {
 app-news-searcher {
   flex: 1;
 }
+
+.navigate-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  box-shadow: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.navigate-button img {
+  width: 80%;
+  height: auto;
+}
+
+.navigate-button:hover {
+  box-shadow: 0 4px 8px rgba(145, 72, 72, 0.6);
+}

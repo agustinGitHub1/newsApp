@@ -1,0 +1,7 @@
+<div class="modal-overlay" *ngIf="isVisible">
+  <div class="modal-content">
+    <h2>{{ title }}</h2>
+    <p>{{ message }}</p>
+    <button class="modal-close-button" (click)="close()">{{ 'modal-close-label' | translate}}</button>
+  </div>
+</div>

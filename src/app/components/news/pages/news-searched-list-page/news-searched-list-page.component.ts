@@ -11,7 +11,9 @@ import { SelectedCardService } from 'src/app/services/news-service/card-selected
 export class NewsSearchedListPageComponent implements OnInit {
   searchedQueryList: any = history.state.searchedList ?? '';
   currentPage: number = 1;
-  itemsPerPage: number = 10;
+  pageSize = 6;
+  totalPages = 1;
+  displayedNews: Article[] = [];
 
   constructor(private router: Router, private selectedCardService: SelectedCardService) { }
 
@@ -22,25 +24,21 @@ export class NewsSearchedListPageComponent implements OnInit {
     };
 
     this.selectedCardService.setSelectedArticles(this.searchedQueryList);
+    this.totalPages = Math.ceil(this.searchedQueryList.length / this.pageSize);
+
+    this.loadPage(this.currentPage);
   }
 
-   get paginatedArticles(): Article[] {
-    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-    const endIndex = startIndex + this.itemsPerPage;
-    return this.searchedQueryList.slice(startIndex, endIndex);
-  }
-
-  changePage(page: number): void {
-    if (page < 1 || page > this.totalPages) {
-      return;
-    }
+  loadPage(page: number): void {
     this.currentPage = page;
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const endIndex = startIndex + this.pageSize;
+    this.displayedNews = this.searchedQueryList.slice(startIndex, endIndex);
   }
 
-  get totalPages(): number {
-    return Math.ceil(this.searchedQueryList.length / this.itemsPerPage);
+  onPageChanged(page: number): void {
+    this.loadPage(page);
   }
-
 
   onCardClick() {
     this.selectedCardService.setSelectedArticles(this.searchedQueryList);

@@ -3,4 +3,11 @@
   <input type="text" placeholder="{{'search-bar-placeholder-label' | translate}}" class="search-bar" (keyup)="onKeyPress(txtInput.value)" (keyup.enter)="onEnter()" #txtInput>
 </div>
 
+<app-modal-popup
+    title="{{'error-title-label' | translate}}"
+    message="{{'error-message-label' | translate}}"
+    [isVisible]="showErrorModal"
+    (closeModal)="handleCloseModal()">
+  </app-modal-popup>
+
 

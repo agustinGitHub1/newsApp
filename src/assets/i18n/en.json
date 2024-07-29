@@ -17,5 +17,9 @@
   "contact-us-label": "Contact",
   "copyright-label": "@ 2024 App News. All rights reserved.",
   "english-selection-label": "English",
-  "spanish-selection-label": "Español"
+  "spanish-selection-label": "Español",
+  "no-info-available": "No information available.",
+  "error-title-label": "Error",
+  "error-message-label": "Failed to retrieve news. Please try again later.",
+  "modal-close-label": "Close"
 }

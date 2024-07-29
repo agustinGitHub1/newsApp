@@ -5,7 +5,7 @@
     <p class="article-description">{{ 'published-date-label' | translate }}: {{ formatedDate }}</p>
     <h1 class="article-title">{{ article.title }}</h1>
     <h3 class="article-description">{{ article.description }}</h3>
-    <img [src]="article.urlToImage" alt="Image" class="article-image">
+    <img [src]="article.urlToImage" alt="Image" class="article-image" (error)="setDefaultImage($event)">
     <p class="article-description">{{ article.content }}</p>
     <p class="article-description">{{ 'original-article-url-label' | translate }}: <a class="article-url" [href]="article.url">{{ article.url }}</a></p>
   </div>

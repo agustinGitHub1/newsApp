@@ -14,27 +14,47 @@ export class HomeNewsComponent implements OnInit {
   news: Article[] = [];
   displayedNews: Article[] = [];
   isLoading: boolean = true;
+  currentPage = 1;
+  totalPages = 1;
+  pageSize = 6;
+  showErrorModal: boolean = false;
 
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
     this.newsService.getNews().subscribe({
       next: (data: NewsArticle) => {
-        try {
           this.news = data.articles?.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()) || [];
-          this.displayedNews = this.news.slice(0, 6);
+
+          this.totalPages = Math.ceil(this.news.length / this.pageSize);
+
+          this.loadPage(this.currentPage);
+
           setTimeout(() => {
             this.isLoading = false;
-          }, 4000);
-        } catch (error) {
-          console.error('error proccessing data: ', error);
-        }
+          }, 2000);
       },
       error: (err) => {
         console.error('Error getting news:', err);
         this.isLoading = false;
+        this.showErrorModal = true;
       }
     });
+  }
+
+  loadPage(page: number): void {
+    this.currentPage = page;
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const endIndex = startIndex + this.pageSize;
+    this.displayedNews = this.news.slice(startIndex, endIndex);
+  }
+
+  onPageChanged(page: number): void {
+    this.loadPage(page);
+  }
+
+  handleCloseModal() {
+    this.showErrorModal = false;
   }
 }
 

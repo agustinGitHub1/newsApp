@@ -4,7 +4,7 @@
 
   <div class="card-container">
     <app-card
-      *ngFor="let newsArticle of paginatedArticles"
+      *ngFor="let newsArticle of displayedNews"
       [title]="newsArticle.title"
       [image]="newsArticle.urlToImage"
       [url]="newsArticle.url"
@@ -12,10 +12,6 @@
     </app-card>
   </div>
 
-  <div class="pagination" *ngIf="totalPages > 1">
-    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">{{'previous-page-label' | translate}}</button>
-    <span>{{'page-label' | translate}} {{currentPage}} {{'of-label' | translate}} {{totalPages}}</span>
-    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">{{'next-page-label' | translate}}</button>
-  </div>
+  <app-paginator [currentPage]="currentPage" [totalPages]="totalPages" (pageChanged)="onPageChanged($event)"></app-paginator>
 </div>
 
