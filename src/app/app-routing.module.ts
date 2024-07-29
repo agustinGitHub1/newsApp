@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./components/main-page.module').then(m => m.MainPageModule),
+  },
+  {
+    path: '**',
+    redirectTo: '',
   }
 ];
 

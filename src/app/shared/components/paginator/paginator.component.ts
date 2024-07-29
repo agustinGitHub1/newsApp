@@ -15,6 +15,7 @@ export class PaginatorComponent {
   changePage(page: number): void {
     if (page > 0 && page <= this.totalPages) {
       this.pageChanged.emit(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 }

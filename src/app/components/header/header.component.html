@@ -1,4 +1,4 @@
-<div class="header-container">
+<div *ngIf="!isMobile; else isNotMobile" class="header-container">
   <app-theme-switcher></app-theme-switcher>
   <h1>{{'app-news-title' | translate}}</h1>
   <button class="navigate-button" (click)="navigateToRoute('')">
@@ -7,3 +7,36 @@
   <app-news-searcher></app-news-searcher>
   <app-language-switcher></app-language-switcher>
 </div>
+
+<ng-template #isNotMobile>
+  <div class="header-container">
+    <button class="menu-button styled-button" (click)="toggleMenu()">
+      ☰
+    </button>
+    <h1>{{'app-news-title' | translate}}</h1>
+
+    <button class="navigate-button" (click)="navigateToRoute('')">
+      <img [src]="homeImg" alt="Navigate" />
+    </button>
+
+      <div [ngClass]="{'mobile-container': true, 'visible': menuVisible, 'hidden': !menuVisible}">
+      <nav class="menu-mobile">
+        <button class="close-menu styled-button" (click)="toggleMenu()">✖</button>
+        <li class="item">
+          <app-news-searcher (keyup.enter)="toggleMenu()"></app-news-searcher>
+        </li>
+        <li class="item">
+          <div class="mobile-lang-switcher">
+            <app-language-switcher></app-language-switcher>
+          </div>
+        </li>
+        <li class="item">
+          <div class="mobile-switcher">
+            <app-theme-switcher (click)="toggleMenu()"></app-theme-switcher>
+          </div>
+        </li>
+      </nav>
+    </div>
+  </div>
+</ng-template>
+

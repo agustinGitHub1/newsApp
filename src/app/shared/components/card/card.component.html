@@ -4,7 +4,7 @@
       <img [src]="imageUrl" alt="Image" class="card-image" (error)="setDefaultImage($event)">
       <div class="card-content">
         <h2 class="card-title">{{title}}</h2>
-        <h3 class="card-author">{{ 'author-label' | translate }}: {{article.author}}</h3>
+        <h3 class="card-author">{{ 'author-label' | translate }}: {{author}}</h3>
         <p class="card-description">{{article.description}}</p>
       </div>
     </a>
