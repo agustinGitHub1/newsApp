@@ -46,4 +46,11 @@ export class HeaderComponent implements OnInit {
       this.toggleMenu();
     }
   }
+
+  handleToggleMobileMenu(shouldClose: boolean) {
+    if (shouldClose) {
+      this.toggleMenu();
+    }
+  }
+
 }

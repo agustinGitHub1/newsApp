@@ -1,4 +1,13 @@
 <div class="search-container">
-  <img class="search-icon" width="32" height="32" [src]="searchImg" alt="search icon"/>
-  <input type="text" placeholder="{{'search-bar-placeholder-label' | translate}}" class="search-bar" (keyup)="onKeyPress(txtInput.value)" (keyup.enter)="onEnter()" #txtInput>
+  <!-- <img class="search-icon" width="32" height="32" [src]="searchImg" alt="search icon"/> -->
+  <button (click)="onEnter()" class="search-icon-button">
+    <img class="search-icon" width="32" height="32" [src]="searchImg" alt="search icon"/>
+  </button>
+
+  <input type="text"
+    placeholder="{{'search-bar-placeholder-label' | translate}}"
+    class="search-bar"
+    (keyup)="onKeyPress(txtInput.value)"
+    (keyup.enter)="onEnter()" #txtInput
+    >
 </div>

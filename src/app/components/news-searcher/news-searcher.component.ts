@@ -13,12 +13,14 @@ import { ModalService } from '../../services/modal-error-service/modal-error.ser
 })
 export class NewsSearcherComponent implements OnInit {
   @Output() onDebounce = new EventEmitter<string>();
+  @Output() toggleMobileMenu = new EventEmitter<boolean>();
   searchResults: any[] = [];
   searchQuery: string = '';
   debouncer: Subject<string> = new Subject<string>();
   searchImg: string = IMAGE_URLS_CONSTANTS.SEARCH_IMG;
   errorTitleModal: string = '';
   showErrorModal: boolean = false;
+
 
   constructor(private newsService: NewsService, private router: Router, private modalService: ModalService) { }
 
@@ -40,6 +42,7 @@ export class NewsSearcherComponent implements OnInit {
         (data: NewsArticle) => {
           this.searchResults = data.articles || [];
           if (this.searchResults.length > 0) {
+            this.toggleMobileMenu.emit(true);
             this.router.navigateByUrl('/refresh', { skipLocationChange: true }).then(() => {
               this.router.navigate(['news-searched-list'], { state: { searchedList: this.searchResults } });
             });

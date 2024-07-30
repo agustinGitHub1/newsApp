@@ -23,7 +23,7 @@
       <nav class="menu-mobile">
         <button class="close-menu styled-button" (click)="toggleMenu()">✖</button>
         <li class="item">
-          <app-news-searcher (keyup.enter)="toggleMenu()"></app-news-searcher>
+          <app-news-searcher (keyup.enter)="toggleMenu()" (toggleMobileMenu)="handleToggleMobileMenu($event)"></app-news-searcher>
         </li>
         <li class="item">
           <div class="mobile-lang-switcher">
