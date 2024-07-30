@@ -9,11 +9,12 @@ import { TranslatePipe } from './pipes/translate.pipe';
 import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { ModalPopupComponent } from './components/modal-popup/modal-popup.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  exports: [CardComponent,SpinnerComponent, BlankComponent, ThemeSwitcherComponent, TranslatePipe, LanguageSwitcherComponent, PaginatorComponent, ModalPopupComponent],
-  declarations: [CardComponent, SpinnerComponent, BlankComponent, ThemeSwitcherComponent, TranslatePipe, LanguageSwitcherComponent, PaginatorComponent, ModalPopupComponent],
+  exports: [CardComponent,SpinnerComponent, BlankComponent, ThemeSwitcherComponent, TranslatePipe, LanguageSwitcherComponent, PaginatorComponent, ModalPopupComponent,ErrorPageComponent],
+  declarations: [CardComponent, SpinnerComponent, BlankComponent, ThemeSwitcherComponent, TranslatePipe, LanguageSwitcherComponent, PaginatorComponent, ModalPopupComponent, ErrorPageComponent],
   providers: [],
 })
 export class SharedModule { }

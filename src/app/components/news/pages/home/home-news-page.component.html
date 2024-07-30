@@ -5,7 +5,7 @@
       <app-spinner></app-spinner>
     </div>
 
-      <div class="card-container"  [ngClass]="{'visible': !isLoading, 'hidden': isLoading}">
+      <div *ngIf="!showErrorScreen" class="card-container"  [ngClass]="{'visible': !isLoading, 'hidden': isLoading}">
         <app-card
             *ngFor="let newsArticle of displayedNews"
             [title]="newsArticle.title"
@@ -14,6 +14,8 @@
             [article]="newsArticle">
           </app-card>
     </div>
+
+    <app-error-page *ngIf="showErrorScreen"></app-error-page>
 
     <app-paginator
     [currentPage]="currentPage"

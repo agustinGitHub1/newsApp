@@ -4,7 +4,7 @@ import { of, throwError } from 'rxjs';
 import { NewsService } from 'src/app/services/news-service/news.service';
 import { NewsSearcherComponent } from './news-searcher.component';
 import { NewsArticle } from 'src/app/interfaces/news-interface/news.interface';
-import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
+import { IMAGE_URLS_CONSTANTS } from 'src/assets/constants/imageUrls';
 import { TranslationService } from 'src/app/services/translate/translate.service';
 import { TranslatePipe } from 'src/app/shared/pipes/translate.pipe';
 import { ModalPopupComponent } from 'src/app/shared/components/modal-popup/modal-popup.component';

@@ -21,5 +21,6 @@
   "no-info-available": "No hay información disponible.",
   "error-title-label": "Error",
   "error-message-label": "Ha ocurrido un fallo al recuperar las noticias. Por favor intentalo de nuevo mas tarde.",
-  "modal-close-label": "Cerrar"
+  "modal-close-label": "Cerrar",
+  "error-page-message-label": "!Algo salió mal! Por favor intenta de nuevo mas tarde."
 }

@@ -21,5 +21,6 @@
   "no-info-available": "No information available.",
   "error-title-label": "Error",
   "error-message-label": "Failed to retrieve news. Please try again later.",
-  "modal-close-label": "Close"
+  "modal-close-label": "Close",
+  "error-page-message-label": "Something went wrong! Please try again later."
 }

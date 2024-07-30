@@ -1,0 +1,38 @@
+.error-container {
+  position: relative;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 200px;
+  text-align: center;
+  background-color: var(--card-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-image {
+  width: 100%;
+}
+
+.error-container h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #9c0b0b;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--card-color);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.error-message {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--error-page-msg-color);
+  margin: 20px 0;
+  line-height: 1.5;
+}

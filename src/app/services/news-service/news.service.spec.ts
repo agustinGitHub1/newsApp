@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { NewsService } from './news.service';
 import { NewsArticle } from 'src/app/interfaces/news-interface/news.interface';
+import { GENERAL_CONSTANTS } from 'src/assets/constants/general-constants';
 
 describe('NewsService', () => {
   let service: NewsService;
@@ -50,7 +51,7 @@ describe('NewsService', () => {
     });
 
     it('should handle error responses', () => {
-      const errorMessage = 'Http failure response for https://newsapi.org/v2/everything?q=news&apiKey=8ab9f6a80b5241b4ba7f0b3938ea683e: 500 Server Error';
+      const errorMessage = `Http failure response for https://newsapi.org/v2/everything?q=news&apiKey=${GENERAL_CONSTANTS.NEWS_API_KEY}: 500 Server Error`;
 
       service.getNews().subscribe(
         () => fail('Expected an error, not news data'),
@@ -96,7 +97,7 @@ describe('NewsService', () => {
     it('should handle error responses', () => {
       const query = 'angular';
 
-      const errorMessage = 'Http failure response for https://newsapi.org/v2/everything?q=angular&apiKey=8ab9f6a80b5241b4ba7f0b3938ea683e: 500 Server Error';
+      const errorMessage = `Http failure response for https://newsapi.org/v2/everything?q=angular&apiKey=${GENERAL_CONSTANTS.NEWS_API_KEY}: 500 Server Error`;
 
       service.getSearchedNews(query).subscribe(
         () => fail('Expected an error, not news data'),

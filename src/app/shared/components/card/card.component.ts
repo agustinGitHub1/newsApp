@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Article } from 'src/app/interfaces/news-interface/news.interface';
 import { SelectedCardService } from 'src/app/services/news-service/card-selected.service';
-import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
+import { IMAGE_URLS_CONSTANTS } from 'src/assets/constants/imageUrls';
 import { setDefaultImage } from '../../helpers/helps';
 import { TranslationService } from 'src/app/services/translate/translate.service';
 

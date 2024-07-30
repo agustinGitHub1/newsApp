@@ -1,0 +1,3 @@
+export const GENERAL_CONSTANTS = {
+  NEWS_API_KEY: '98d84fd00e044551af0c5099b7367829',
+}

@@ -19,6 +19,7 @@ export class HomeNewsComponent implements OnInit {
   totalPages = 1;
   pageSize = 6;
   showErrorModal: boolean = false;
+  showErrorScreen: boolean = false;
 
   constructor(private newsService: NewsService, public modalService: ModalService) { }
 
@@ -43,6 +44,7 @@ export class HomeNewsComponent implements OnInit {
         console.error('Error getting news:', err);
         this.isLoading = false;
         this.showErrorModal = true;
+        this.showErrorScreen = true;
       }
     });
   }

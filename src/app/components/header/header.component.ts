@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
+import { IMAGE_URLS_CONSTANTS } from 'src/assets/constants/imageUrls';
 
 @Component({
   selector: 'app-header',
@@ -14,9 +14,8 @@ export class HeaderComponent implements OnInit {
   menuVisible: boolean = false;
 
   constructor(private router: Router, private elementRef: ElementRef) {}
-
   ngOnInit(): void {
-    //this.onResize({ target: window } as unknown as Event);
+    this.setDeviceType(window.innerWidth);
   }
 
   navigateToRoute(route: string): void {
@@ -31,6 +30,9 @@ export class HeaderComponent implements OnInit {
 
   setDeviceType(width: number) {
     this.isMobile = width < 768;
+    if (!this.isMobile) {
+      this.menuVisible = false;
+    }
   }
 
   toggleMenu(): void {

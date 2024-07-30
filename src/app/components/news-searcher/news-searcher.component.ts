@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { debounceTime, Subject } from 'rxjs';
 import { NewsArticle } from 'src/app/interfaces/news-interface/news.interface';
 import { NewsService } from 'src/app/services/news-service/news.service';
-import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
+import { IMAGE_URLS_CONSTANTS } from 'src/assets/constants/imageUrls';
 import { ModalService } from '../../services/modal-error-service/modal-error.service';
 
 @Component({

@@ -4,7 +4,7 @@ import { Article, NewsArticle } from 'src/app/interfaces/news-interface/news.int
 import { SelectedCardService } from 'src/app/services/news-service/card-selected.service';
 import { TranslationService } from 'src/app/services/translate/translate.service';
 import { getFormatedDate, setDefaultImage } from 'src/app/shared/helpers/helps';
-import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
+import { IMAGE_URLS_CONSTANTS } from 'src/assets/constants/imageUrls';
 
 @Component({
   selector: 'app-news-article',
