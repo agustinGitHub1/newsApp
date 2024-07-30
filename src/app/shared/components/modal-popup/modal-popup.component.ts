@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './modal-popup.component.html',
   styleUrls: ['./modal-popup.component.css']
 })
-export class ModalPopuComponent {
+export class ModalPopupComponent {
   @Input() title: string = '';
   @Input() message: string = '';
   @Input() isVisible: boolean = false;

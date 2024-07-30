@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Article, NewsArticle } from 'src/app/interfaces/news-interface/news.interface';
+import { ModalService } from 'src/app/services/modal-error-service/modal-error.service';
 import { NewsService } from 'src/app/services/news-service/news.service';
 
 @Component({
@@ -19,9 +20,13 @@ export class HomeNewsComponent implements OnInit {
   pageSize = 6;
   showErrorModal: boolean = false;
 
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService, public modalService: ModalService) { }
 
   ngOnInit() {
+    this.modalService.error$.subscribe(show => {
+      this.showErrorModal = show;
+    });
+
     this.newsService.getNews().subscribe({
       next: (data: NewsArticle) => {
           this.news = data.articles?.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()) || [];

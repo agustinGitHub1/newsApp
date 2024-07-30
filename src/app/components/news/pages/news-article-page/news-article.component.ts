@@ -15,7 +15,7 @@ import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
 export class NewsArticleComponent implements OnInit {
   @Input() article: Article | null = {} as Article;
 
-  private originUrl: string = '';
+  originUrl: string = '';
   formatedDate: string = 'N/A';
   author: string = '';
   articleSearchedList: Article[] = [];
@@ -26,16 +26,17 @@ export class NewsArticleComponent implements OnInit {
   ngOnInit(): void {
     this.selectedCardService.selectedCard$.subscribe(article => {
       this.article = article;
+      if (this.article) {
+        this.formatedDate = getFormatedDate(this.article.publishedAt);
+        this.translateAuthor();
+      } else {
+        this.router.navigate(['']);
+      }
     });
 
-    this.article = this.selectedCardService.getCardFromLocalStorage();
-    if (!this.article) this.router.navigate(['']);
-
-    this.formatedDate = getFormatedDate(this.article!.publishedAt!);
-    this.translateAuthor();
     this.originUrl = history.state.originUrl ?? '';
 
-    this.articleSearchedList = this.selectedCardService.getArticlesFromLocalStorage() ?? [];
+    this.articleSearchedList = this.selectedCardService.getArticlesFromLocalStorage() ?? []
   }
 
   setDefaultImage(event: Event): void {

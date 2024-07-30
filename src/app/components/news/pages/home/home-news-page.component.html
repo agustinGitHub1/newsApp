@@ -25,7 +25,7 @@
     title="{{'error-title-label' | translate}}"
     message="{{'error-message-label' | translate}}"
     [isVisible]="showErrorModal"
-    (closeModal)="handleCloseModal()">
+    (closeModal)="modalService.hideError()">
   </app-modal-popup>
 
 </div>

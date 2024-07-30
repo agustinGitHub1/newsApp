@@ -6,7 +6,7 @@ export interface NewsArticle {
 
 export interface Article {
   source:      Source;
-  author:      string;
+  author:      string | null;
   title:       string;
   description: string;
   url:         string;

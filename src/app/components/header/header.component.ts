@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit {
   clickOut(event: MouseEvent): void {
     const clickedInside = this.elementRef.nativeElement.contains(event.target);
     if (!clickedInside && this.menuVisible) {
-      this.toggleMenu(); // Cierra el menú si se hace clic fuera
+      this.toggleMenu();
     }
   }
 }

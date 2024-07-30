@@ -4,6 +4,7 @@ import { debounceTime, Subject } from 'rxjs';
 import { NewsArticle } from 'src/app/interfaces/news-interface/news.interface';
 import { NewsService } from 'src/app/services/news-service/news.service';
 import { IMAGE_URLS_CONSTANTS } from 'src/assets/images/imageUrls';
+import { ModalService } from '../../services/modal-error-service/modal-error.service';
 
 @Component({
   selector: 'app-news-searcher',
@@ -14,12 +15,12 @@ export class NewsSearcherComponent implements OnInit {
   @Output() onDebounce = new EventEmitter<string>();
   searchResults: any[] = [];
   searchQuery: string = '';
-  private debouncer: Subject<string> = new Subject<string>();
+  debouncer: Subject<string> = new Subject<string>();
   searchImg: string = IMAGE_URLS_CONSTANTS.SEARCH_IMG;
   errorTitleModal: string = '';
   showErrorModal: boolean = false;
 
-  constructor(private newsService: NewsService, private router: Router) { }
+  constructor(private newsService: NewsService, private router: Router, private modalService: ModalService) { }
 
   ngOnInit(): void {
     this.debouncer.pipe(
@@ -46,7 +47,7 @@ export class NewsSearcherComponent implements OnInit {
         },
         error => {
           console.error('Error fetching search results:', error);
-          this.showErrorModal = true;
+          this.modalService.showError();
         }
       );
     } else {
