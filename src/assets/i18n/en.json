@@ -22,5 +22,7 @@
   "error-title-label": "Error",
   "error-message-label": "Failed to retrieve news. Please try again later.",
   "modal-close-label": "Close",
-  "error-page-message-label": "Something went wrong! Please try again later."
+  "error-page-message-label": "Something went wrong! Please try again later.",
+  "language-selection-label": "Language selection: ",
+  "theme-button-label": "Dark/light theme:"
 }

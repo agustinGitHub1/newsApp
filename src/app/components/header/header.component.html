@@ -1,4 +1,4 @@
-<div *ngIf="!isMobile; else isNotMobile" class="header-container">
+<div *ngIf="!isMobile; else isMobileRes" class="header-container">
   <app-theme-switcher></app-theme-switcher>
   <h1>{{'app-news-title' | translate}}</h1>
   <button class="navigate-button" (click)="navigateToRoute('')">
@@ -8,7 +8,7 @@
   <app-language-switcher></app-language-switcher>
 </div>
 
-<ng-template #isNotMobile>
+<ng-template #isMobileRes>
   <div class="header-container">
     <button class="menu-button styled-button" (click)="toggleMenu()">
       ☰
@@ -27,12 +27,12 @@
         </li>
         <li class="item">
           <div class="mobile-lang-switcher">
-            <app-language-switcher></app-language-switcher>
+           <p class="menu-mobile-text">{{'language-selection-label'| translate}}</p><app-language-switcher></app-language-switcher>
           </div>
         </li>
         <li class="item">
           <div class="mobile-switcher">
-            <app-theme-switcher></app-theme-switcher>
+            <p class="menu-mobile-text">{{'theme-button-label' | translate}}</p><app-theme-switcher></app-theme-switcher>
           </div>
         </li>
       </nav>

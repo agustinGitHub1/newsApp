@@ -9,6 +9,7 @@ import { CardComponent } from 'src/app/shared/components/card/card.component';
 import { SpinnerComponent } from 'src/app/shared/components/spinner/spinner.component';
 import { PaginatorComponent } from 'src/app/shared/components/paginator/paginator.component';
 import { ModalPopupComponent } from 'src/app/shared/components/modal-popup/modal-popup.component';
+import { ErrorPageComponent } from 'src/app/shared/components/error-page/error-page.component';
 
 describe('HomeNewsComponent', () => {
   let component: HomeNewsComponent;
@@ -30,6 +31,7 @@ describe('HomeNewsComponent', () => {
                       SpinnerComponent,
                       PaginatorComponent,
                       ModalPopupComponent,
+                      ErrorPageComponent
                     ],
       providers: [
         { provide: NewsService, useValue: newsServiceSpy },

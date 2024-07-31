@@ -15,12 +15,14 @@
   "about-us-label": "Sobre nosotros",
   "privacy-policy-label": "Política de privacidad",
   "contact-us-label": "Contacto",
-  "copyright-label": "@ 2024 Noticias de la App. Todos los derechos reservados.",
+  "copyright-label": "@ 2024 App News Todos los derechos reservados.",
   "english-selection-label": "English",
   "spanish-selection-label": "Español",
   "no-info-available": "No hay información disponible.",
   "error-title-label": "Error",
   "error-message-label": "Ha ocurrido un fallo al recuperar las noticias. Por favor intentalo de nuevo mas tarde.",
   "modal-close-label": "Cerrar",
-  "error-page-message-label": "!Algo salió mal! Por favor intenta de nuevo mas tarde."
+  "error-page-message-label": "!Algo salió mal! Por favor intenta de nuevo mas tarde.",
+  "language-selection-label": "Idioma",
+  "theme-button-label": "Tema claro/oscuro:"
 }
