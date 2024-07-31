@@ -1,4 +1,32 @@
 # newsApp
+
+Esta app fue creada para un challenge técnico de FUDO:
+
+Los requerimientos fundamentales son los siguientes:
+1. El diseño básicamente debería ser un Header, Body y un Footer.
+2. En el header se debería contar con un buscador de noticias.
+3. La página principal debería mostrar todos los artículos devueltos en la primera página
+del request en formato de cards, incluyendo título, autor, descripción e imagen.
+4. El diseño de la página y de las cards queda totalmente libre de definición. La única
+restricción es que tendría que ser responsive y no utilizar ningún framework CSS.
+5. Al clickear una card, debería redirigir a una nueva página mostrando únicamente el
+contenido de la noticia seleccionada.
+6. El proyecto debería subirse a un repositorio en cualquier plataforma.
+7. Que en el repositorio, se encuentre el Dockerfile correspondiente para builder la imagen
+que sirva la aplicación, utilizando Nginx.
+Sugerencias: Contemplar buenas prácticas y tener en cuenta la escalabilidad de la aplicación.
+Opcional:
+- Hostear la aplicación en gh-pages o cualquier otro hosting.
+- Agregar tests.
+
+Aplicacion Hosteada en Vercel: https://news-app-git-main-agustingithub1s-projects.vercel.app/
+
+Screenshots test unitarios:
+[![unit-Testcomplete1.png](https://i.postimg.cc/PJ2HQQ7Q/unit-Testcomplete1.png)](https://postimg.cc/n9jNHBpX)
+[![unit-Testcomplete2.png](https://i.postimg.cc/T29TxTP5/unit-Testcomplete2.png)](https://postimg.cc/xqcwyDM9)
+
+
+# newsApp
 challenge - news app
 
 This app was developed to address a challenge from the company FUDO.
@@ -19,3 +47,10 @@ Consider best practices and keep scalability of the application in mind.
 Optional:
 Host the application on gh-pages or any other hosting platform.
 Add tests.
+
+Aplicacion hosted in Vercel: https://news-app-git-main-agustingithub1s-projects.vercel.app/
+
+Screenshots unit tests:
+[![unit-Testcomplete1.png](https://i.postimg.cc/PJ2HQQ7Q/unit-Testcomplete1.png)](https://postimg.cc/n9jNHBpX)
+[![unit-Testcomplete2.png](https://i.postimg.cc/T29TxTP5/unit-Testcomplete2.png)](https://postimg.cc/xqcwyDM9)
+
