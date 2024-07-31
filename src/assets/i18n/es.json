@@ -22,7 +22,7 @@
   "error-title-label": "Error",
   "error-message-label": "Ha ocurrido un fallo al recuperar las noticias. Por favor intentalo de nuevo mas tarde.",
   "modal-close-label": "Cerrar",
-  "error-page-message-label": "!Algo salió mal! Por favor intenta de nuevo mas tarde.",
+  "error-page-message-label": "¡Algo salió mal! Por favor intenta de nuevo mas tarde.",
   "language-selection-label": "Idioma",
   "theme-button-label": "Tema claro/oscuro:"
 }
