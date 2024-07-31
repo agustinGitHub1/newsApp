@@ -19,11 +19,16 @@ Opcional:
 - Hostear la aplicación en gh-pages o cualquier otro hosting.
 - Agregar tests.
 
-Aplicacion Hosteada en Vercel: https://news-app-git-main-agustingithub1s-projects.vercel.app/
+Aplicacion Hosteada en Vercel (No funciona ya que NewsApi es solo para desarrollo, pero sirve para ver los casos de error cuando no se retorna info de la api): https://news-app-git-main-agustingithub1s-projects.vercel.app/
 
 Screenshots test unitarios:
 [![unit-Testcomplete1.png](https://i.postimg.cc/PJ2HQQ7Q/unit-Testcomplete1.png)](https://postimg.cc/n9jNHBpX)
 [![unit-Testcomplete2.png](https://i.postimg.cc/T29TxTP5/unit-Testcomplete2.png)](https://postimg.cc/xqcwyDM9)
+
+Para construir la imagen en Docker y despues ejecutar el contenedor usar los siguientes comandos de ejemplo:
+docker build -t news-app .
+
+docker run -p 80:80 --name news-app-container news-app
 
 
 # newsApp
@@ -48,9 +53,15 @@ Optional:
 Host the application on gh-pages or any other hosting platform.
 Add tests.
 
-Aplicacion hosted in Vercel: https://news-app-git-main-agustingithub1s-projects.vercel.app/
+Application Hosted on Vercel (Not functional as NewsApi is for development only, but useful for seeing error cases when no information is returned from the API): https://news-app-git-main-agustingithub1s-projects.vercel.app/
 
 Screenshots unit tests:
 [![unit-Testcomplete1.png](https://i.postimg.cc/PJ2HQQ7Q/unit-Testcomplete1.png)](https://postimg.cc/n9jNHBpX)
 [![unit-Testcomplete2.png](https://i.postimg.cc/T29TxTP5/unit-Testcomplete2.png)](https://postimg.cc/xqcwyDM9)
+
+
+To build a docker image and execute it use the following example commands:
+docker build -t news-app .
+
+docker run -p 80:80 --name news-app-container news-app
 
