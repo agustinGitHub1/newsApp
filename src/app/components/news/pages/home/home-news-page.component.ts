@@ -11,7 +11,6 @@ import { NewsService } from 'src/app/services/news-service/news.service';
 })
 
 export class HomeNewsComponent implements OnInit {
-  news$!: Observable<NewsArticle>;
   news: Article[] = [];
   displayedNews: Article[] = [];
   isLoading: boolean = true;

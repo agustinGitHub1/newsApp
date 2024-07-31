@@ -7,9 +7,9 @@ import { GENERAL_CONSTANTS } from 'src/assets/constants/general-constants';
 @Injectable({providedIn: 'root'})
 export class NewsService {
   private newsApiKey = GENERAL_CONSTANTS.NEWS_API_KEY;
-  private newsBaseUrl = `https://newsapi.org/v2/everything`
+  private newsBaseUrl = `https://newsapi.org/v2/everything`;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getNews() {
     return this.httpClient.get<NewsArticle>(`${this.newsBaseUrl}?q=news&apiKey=${this.newsApiKey}`).pipe(
